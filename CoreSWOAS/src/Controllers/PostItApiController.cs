@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreSWOAS.Framework;
 using CoreSWOAS.Models;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.SwaggerGen.Annotations;
@@ -9,7 +10,7 @@ namespace CoreSWOAS.Controllers
     /// <summary>
     /// Default sample REST API controller
     /// </summary>
-    public sealed class PostItApiController : Controller
+    public sealed class PostItApiController : DefaultController
     {
         /// <summary>
         /// Get a post-it

@@ -1,9 +1,11 @@
-﻿namespace CoreSWOAS.Models
+﻿using System.Runtime.Serialization;
+using CoreSWOAS.Interfaces;
+
+namespace CoreSWOAS.Models
 {
     /// <summary>
-    /// 
     /// </summary>
-    public class InstancedPostIt: PostIt, IInstanced<InstancedPostIt>
+    public class InstancedPostIt : PostIt, IInstanced<InstancedPostIt>
     {
         /// <inheritdoc />
         public string Guid { get; set; }
@@ -22,7 +24,7 @@
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != GetType()) return false;
-            return Equals((InstancedPostIt) obj);
+            return Equals((InstancedPostIt)obj);
         }
 
         /// <inheritdoc />

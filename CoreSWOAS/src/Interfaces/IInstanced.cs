@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace CoreSWOAS.Models
+namespace CoreSWOAS.Interfaces
 {
+    /// <inheritdoc />
     /// <summary>
-    /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IInstanced<T> : IEquatable<T>
