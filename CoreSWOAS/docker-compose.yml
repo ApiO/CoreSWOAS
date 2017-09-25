@@ -4,5 +4,5 @@ services:
   coreswoas:
     image: coreswoas
     build:
-      context: ./CoreSWOAS
+      context: ./src
       dockerfile: Dockerfile
