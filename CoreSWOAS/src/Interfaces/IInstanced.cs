@@ -7,7 +7,7 @@ namespace CoreSWOAS.Interfaces
     /// <summary>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IInstanced<T> : IEquatable<T>
+    public interface IInstanced<T> : IEquatable<T> where T : class
     {
         /// <summary>
         /// Model's GUID
