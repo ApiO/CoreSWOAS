@@ -1,5 +1,4 @@
-﻿using System.Runtime.Serialization;
-using CoreSWOAS.Interfaces;
+﻿using CoreSWOAS.Interfaces;
 
 namespace CoreSWOAS.Models
 {
