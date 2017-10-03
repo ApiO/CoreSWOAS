@@ -1,16 +1,19 @@
 # CoreSWOAS
 
-.Net core 1.1 Web Application sample using :
+.Net core 2.0 Web Application sample using :
 - OAS with swagger
 - Repository pattern
 - CI : TravisCI & AppVayor
 - Tests with MSTest
-- QA: Codecov with OpenCover, 
+- QA: Codecov with OpenCover
 
 [![Friendly](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ApiO/CoreSWOAS/blob/master/LICENSE)
 [![Framework version](https://img.shields.io/badge/dotnet_core-1.1-brightgreen.svg)](https://www.microsoft.com/net/core)
 [![Hype](https://img.shields.io/badge/sexy-yes-brightgreen.svg)](https://en.wikipedia.org/wiki/Hype)
 
+## TODO
+
+Add Tests/QA alternative with codcoverages when NUnit will be available on core 2.0 app.
 
 ## CI & QA
 
