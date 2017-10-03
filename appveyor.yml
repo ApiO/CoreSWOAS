@@ -6,10 +6,8 @@ configuration: Release
 
 assembly_info:
   patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
+  file: '**\*.csproj'
+  version: '{version}'
   
 platform: Any CPU
 
@@ -18,8 +16,8 @@ environment:
   secure: oxB2l7vHmBZHBJbl8pFZIGUao5m426LkQInK8WFv235cjMPLzPR+Wz3mdbYTSawM
 
 before_build:
- - nuget restore ".\CoreSWOAS\CoreSWOAS.sln"
+ - nuget restore ".\CoreSWOAS\Tests\CoreSWOAS.Business.Tests\CoreSWOAS.Business.Tests.csproj"
   
 build:
-  project: CoreSWOAS/CoreSWOAS.sln
+  project: CoreSWOAS/Tests/CoreSWOAS.Business.Tests/CoreSWOAS.Business.Tests.csproj
   verbosity: detailed
