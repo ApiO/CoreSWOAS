@@ -1,5 +1,6 @@
 # CoreSWOAS
 Dotnet core Web Application sample using OAS
+
 [![Friendly](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ApiO/CoreSWOAS/blob/master/LICENSE)
 [![Framework version](https://img.shields.io/badge/dotnet_core-1.1-brightgreen.svg)](https://www.microsoft.com/net/core)
 [![Hype](https://img.shields.io/badge/sexy-yes-brightgreen.svg)](https://en.wikipedia.org/wiki/Hype)
@@ -20,7 +21,7 @@ Dotnet core Web Application sample using OAS
 
 MIT License
 
-Copyright (c) 2016 ApiO
+Copyright (c) 2017 ApiO
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
