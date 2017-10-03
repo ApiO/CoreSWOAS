@@ -1,5 +1,11 @@
 # CoreSWOAS
-Dotnet core Web Application sample using OAS
+
+.Net core 1.1 Web Application sample using :
+- OAS with swagger
+- Repository pattern
+- CI : TravisCI & AppVayor
+- Tests with MSTest
+- QA: Codecov with OpenCover, 
 
 [![Friendly](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ApiO/CoreSWOAS/blob/master/LICENSE)
 [![Framework version](https://img.shields.io/badge/dotnet_core-1.1-brightgreen.svg)](https://www.microsoft.com/net/core)
