@@ -10,10 +10,10 @@ Dotnet core Web Application sample using OAS
 
 | Build server                | Platform     | Status                                                                                                                    |
 |-----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|
-| AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/o1veopcf7g5syuy2/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/coreswas/branch/master)      |
+| AppVeyor                    | Windows      | [![Build status](https://ci.appveyor.com/api/projects/status/44jq8atgd51f9y31/branch/master?svg=true)](https://ci.appveyor.com/project/ApiO/coreswas/branch/master)      |
 | Travis                      | Linux | [![Build Status](https://travis-ci.org/ApiO/CoreSWOAS.svg?branch=master)](https://travis-ci.org/ApiO/CoreSWOAS) |
 
-[![Coverall Status](https://coveralls.io/repos/github/ApiO/Tree/badge.svg?branch=master)](https://coveralls.io/github/ApiO/CoreSWOAS?branch=master)
+[![Coverall Status](https://coveralls.io/repos/github/ApiO/CoreSWOAS/badge.svg?branch=master)](https://coveralls.io/github/ApiO/CoreSWOAS?branch=master)
 [![Coverty Status](https://img.shields.io/coverity/scan/13734.svg)](https://scan.coverity.com/projects/apio-coreswas)
 
 
