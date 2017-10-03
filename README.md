@@ -2,7 +2,7 @@
 
 .Net core 2.0 Web Application sample using :
 - OAS with swagger
-- Repository pattern
+- Repository pattern, with native core's dependency injection
 - CI : TravisCI & AppVayor
 - Tests with MSTest
 - QA: Codecov with OpenCover
@@ -13,7 +13,10 @@
 
 ## TODO
 
-Add Tests/QA alternative with codcoverages when NUnit will be available on core 2.0 app.
+- Authentification, using OAuth 2
+- Authorization
+- Add Tests/QA alternative with codcoverages when NUnit will be available on core 2.0 app.
+- Test on Web API
 
 ## CI & QA
 
