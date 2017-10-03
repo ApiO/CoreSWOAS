@@ -1,6 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Xml.XPath;
+using CoreSWOAS.Business.Interfaces;
+using CoreSWOAS.Business.Services;
+using CoreSWOAS.Data.Interfaces;
+using CoreSWOAS.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +25,7 @@ namespace CoreSWOAS
         /// Startup environement
         /// </summary>
         private readonly IHostingEnvironment _hostingEnv;
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -63,7 +67,7 @@ namespace CoreSWOAS
                 {
                     Version = "v1",
                     Title = "CoreSWOAS",
-                    Description = "CoreSWOAS (ASP.NET Core 1.1)"
+                    Description = "CoreSWOAS (ASP.NET Core 2.0)"
                 });
 
                 options.DescribeAllEnumsAsStrings();
@@ -72,6 +76,15 @@ namespace CoreSWOAS
                 options.OperationFilter<XmlCommentsOperationFilter>(comments);
                 options.ModelFilter<XmlCommentsModelFilter>(comments);
             });
+
+            // Register custom services
+            services.AddTransient<IPostItRepository, PostItRepository>();
+            services.AddTransient<IPostItService, PostItService>(ctx =>
+            {
+                var svc = ctx.GetRequiredService<IPostItRepository>();
+                return new PostItService(svc);
+            });
+
         }
 
         /// <summary>

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  ci-build:
+    image: microsoft/aspnetcore-build:2.0
+    volumes:
+      - .:/CoreSWOAS
+    working_dir: /CoreSWOAS
+    command: /bin/bash -c "dotnet restore ../CoreSWOAS.sln && dotnet publish ../CoreSWOAS.sln -c Release -o ./obj/Docker/publish"

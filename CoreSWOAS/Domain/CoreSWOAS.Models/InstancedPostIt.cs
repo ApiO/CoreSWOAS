@@ -1,4 +1,4 @@
-﻿using CoreSWOAS.Interfaces;
+﻿using CoreSWOAS.Models.Interfaces;
 
 namespace CoreSWOAS.Models
 {

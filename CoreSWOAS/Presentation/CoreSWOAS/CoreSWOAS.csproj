@@ -6,12 +6,20 @@
     <AssemblyTitle>CoreSWOAS</AssemblyTitle>
     <PackageId>CoreSWOAS</PackageId>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     <StartupObject>CoreSWOAS.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,6 +53,12 @@
     <None Update="**.user;**.vspscc">
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
+  </ItemGroup> 
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\CoreSWOAS.Business\CoreSWOAS.Business.csproj" />
+    <ProjectReference Include="..\..\Domain\CoreSWOAS.Data\CoreSWOAS.Data.csproj" />
+    <ProjectReference Include="..\..\Domain\CoreSWOAS.Models\CoreSWOAS.Models.csproj" />
   </ItemGroup>
   
 

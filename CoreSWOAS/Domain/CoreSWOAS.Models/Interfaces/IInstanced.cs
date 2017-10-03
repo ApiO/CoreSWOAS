@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace CoreSWOAS.Interfaces
+namespace CoreSWOAS.Models.Interfaces
 {
     /// <inheritdoc />
     /// <summary>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using CoreSWOAS.Business.Interfaces;
 using CoreSWOAS.Framework;
 using CoreSWOAS.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +12,14 @@ namespace CoreSWOAS.Controllers
     /// </summary>
     public sealed class PostItApiController : DefaultController
     {
+        private readonly IPostItService _service;
+
+        /// <inheritdoc />
+        public PostItApiController(IPostItService service)
+        {
+            _service = service;
+        }
+
         /// <summary>
         /// Get a post-it
         /// </summary>
@@ -22,7 +30,7 @@ namespace CoreSWOAS.Controllers
         [SwaggerOperation("GetPostIt")]
         public PostIt GetPostIt([FromBody] string guid)
         {
-            return new PostIt { Title = "fu", Content = "bar" };
+            return _service.Get(guid);
         }
 
         /// <summary>
@@ -36,7 +44,7 @@ namespace CoreSWOAS.Controllers
         [SwaggerOperation("AddPostIt")]
         public string AddPostIt([FromBody] PostIt postIt)
         {
-            return Guid.NewGuid().ToString();
+            return _service.Create(postIt);
         }
 
         /// <summary>
@@ -50,6 +58,7 @@ namespace CoreSWOAS.Controllers
         [SwaggerOperation("UpdatePostIt")]
         public void UpdatePostIt([FromBody] InstancedPostIt postIt)
         {
+            _service.Update(postIt);
         }
 
         /// <summary>
@@ -63,6 +72,7 @@ namespace CoreSWOAS.Controllers
         [SwaggerOperation("DeletePostIt")]
         public void DeletePostIt([FromBody] string guid)
         {
+            _service.Delete(guid);
         }
     }
 }
