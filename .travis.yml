@@ -1,0 +1,7 @@
+language: csharp
+solution: ./CoreSWOAS/CoreSWOAS.sln
+os: linux
+install:
+  - nuget restore ./CoreSWOAS/CoreSWOAS.sln
+script:
+ - xbuild /p:Configuration=Release ./CoreSWOAS/CoreSWOAS.sln
